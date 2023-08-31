@@ -15,3 +15,6 @@ echo '[kinetic 22.10]'
 
 echo '[lunar 23.04]'
 ./ubuntu-archive-tools/copy-package -y -b --from=ubuntu --from-suite=focal-security --to=~${USER}/ubuntu/firefox --to-suite=lunar   firefox 2>&1 || true
+
+echo 'mantic 23.10]'
+./ubuntu-archive-tools/copy-package -y -b --from=ubuntu --from-suite=focal-security --to=~${USER}/ubuntu/firefox --to-suite=mantic  firefox 2>&1 || true
