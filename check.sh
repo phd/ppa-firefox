@@ -27,7 +27,7 @@ if [[ ! "${V2}" =~ $regexp ]]; then
 
     echo 'error'
 
-    ./mail.sh "${EMAIL}" 'firefox version check error' "${V1}\n->\nhttps://launchpad.net/ubuntu/focal/+source/firefox\n\n${V2}\n"
+    ./mail.sh "${EMAIL}" 'firefox version check error' <<< "${V1}\n->\nhttps://launchpad.net/ubuntu/focal/+source/firefox\n\n${V2}\n"
 
 elif [ "${V1}" != "${V2}" ]; then
 
@@ -36,7 +36,7 @@ elif [ "${V1}" != "${V2}" ]; then
     mv "${F_VERSION}" "${F_VERSION_OLD}" || true
     echo "${V2}" > "${F_VERSION}"
     touch "${F_VERSION}"
-    ./mail.sh "${EMAIL}" 'firefox updated in Ubuntu' "${V1}\n->\n${V2}\n"
+    ./mail.sh "${EMAIL}" 'firefox updated in Ubuntu' <<< "${V1}\n->\n${V2}\n"
 
     echo "${PWD}/copy-packages-run.sh ${V1} ${V2}" | at now
 
