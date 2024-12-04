@@ -1,0 +1,1 @@
+0,30 * * * * /bin/bash -c ~/ppa-firefox/check.sh >/dev/null 2>&1
