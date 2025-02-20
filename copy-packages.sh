@@ -15,3 +15,6 @@ echo '[noble 24.04]'
 
 echo '[oracular 24.10]'
 ./ubuntu-archive-tools/copy-package -y -b --from=ubuntu --from-suite=focal-security --to=~${USER}/ubuntu/firefox --to-suite=oracular firefox 2>&1 || true
+
+echo '[plucky 25.04]'
+./ubuntu-archive-tools/copy-package -y -b --from=ubuntu --from-suite=focal-security --to=~${USER}/ubuntu/firefox --to-suite=plucky   firefox 2>&1 || true
